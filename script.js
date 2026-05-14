@@ -40,7 +40,7 @@ function carregarCamada(arquivo, estilo, popupColuna) {
 
 // 5. Carrega os arquivos (Certifique-se de que os nomes no GitHub serão estes)
 //carregarCamada('estados.geojson', { color: "#333", weight: 2, fillOpacity: 0.1 }, 'NM_UF');
-//carregarCamada('municipios.geojson', { color: "#999", weight: 0.5, fillOpacity: 0 }, 'NM_MUN');
+carregarCamada('municipios.geojson', { color: "#999", weight: 0.5, fillOpacity: 0 }, 'NM_MUN');
 carregarCamada('pontos.geojson', {}, 'nome');
 
 // 6. Função para criar a rota
