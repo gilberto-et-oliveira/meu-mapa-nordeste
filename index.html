@@ -23,13 +23,12 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
         
-        /* INSERIDO AQUI */
         .leaflet-routing-container {
             max-width: 300px;
             background-color: white;
             padding: 10px;
             font-size: 13px;
-            z-index: 1001; /* Garante que fique acima de outros elementos */
+            z-index: 1001; 
         }
 
         .instrucoes {
@@ -39,3 +38,21 @@
         }
     </style>
 </head>
+<body>
+
+    <div id="menu-filtros">
+        <h3>Mapa Nordeste</h3>
+        <p>Filtrar Pontos:</p>
+        <input type="checkbox" id="check-pontos" checked> Ver Estabelecimentos
+        <div class="instrucoes">Clique em um ponto e selecione "Adicionar à Rota"</div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
