@@ -12,7 +12,9 @@ var controlRotas = L.Routing.control({
     waypoints: [],
     routeWhileDragging: true,
     language: 'pt-BR',
-    show: true
+    show: true, // Isso garante que o painel apareça
+    collapsible: true, // Permite minimizar o painel
+    geocoder: L.Control.Geocoder ? L.Control.Geocoder.nominatim() : null 
 }).addTo(map);
 
 // 4. Função para carregar as camadas
@@ -46,9 +48,16 @@ carregarCamada('pontos.geojson', {}, 'nome');
 // 6. Função para criar a rota
 function adicionarNaRota(lat, lng) {
     var atuais = controlRotas.getWaypoints();
-    if (atuais[0] && atuais[0].latLng == null) {
-        controlRotas.spliceWaypoints(0, 1, L.latLng(lat, lng));
+    var novoPonto = L.latLng(lat, lng);
+
+    // Se o primeiro ponto estiver vazio, define como partida
+    if (!atuais[0] || atuais[0].latLng == null) {
+        controlRotas.spliceWaypoints(0, 1, novoPonto);
     } else {
-        controlRotas.spliceWaypoints(atuais.length, 0, L.latLng(lat, lng));
+        // Adiciona como próximo destino
+        controlRotas.spliceWaypoints(atuais.length, 0, novoPonto);
     }
+    
+    // Abre o painel de rotas automaticamente
+    controlRotas.show();
 }
