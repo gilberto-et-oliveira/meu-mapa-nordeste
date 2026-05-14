@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "pontos teste",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "nome": "ponto 3", "endereço": "de souza - conj.antonio lins - mata do rolo, Rio Largo - AL, 57100-000" }, "geometry": { "type": "Point", "coordinates": [ -35.814704558399015, -9.486905785041666 ] } },
+{ "type": "Feature", "properties": { "nome": "ponto 2", "endereço": "9°58'07.4\"S 36°02'10.1\"W" }, "geometry": { "type": "Point", "coordinates": [ -36.036113313421104, -9.968798565557037 ] } },
+{ "type": "Feature", "properties": { "nome": "ponto 1", "endereço": "Povoado Ponta de Pedra, 196, Jequiá da Praia - AL, 57255-000" }, "geometry": { "type": "Point", "coordinates": [ -36.036285164019169, -9.969817817380065 ] } },
+{ "type": "Feature", "properties": { "nome": "ponto 4", "endereço": "Tv. dos Arrecifes, S/N - Praia do Francês, Mal. Deodoro - AL, 57160-000" }, "geometry": { "type": "Point", "coordinates": [ -35.842168061735187, -9.770272606550199 ] } }
+]
+}
