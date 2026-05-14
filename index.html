@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interativo Nordeste</title>
+    <title>Mapa Nordeste - Módulo de Rotas</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; }
+        body { margin: 0; padding: 0; }
         #map { height: 100vh; width: 100%; }
         
         #menu-filtros {
@@ -21,20 +22,15 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            font-family: sans-serif;
         }
-        
+
         .leaflet-routing-container {
             max-width: 300px;
             background-color: white;
             padding: 10px;
             font-size: 13px;
-            z-index: 1001; 
-        }
-
-        .instrucoes {
-            font-size: 12px;
-            color: #666;
-            margin-top: 10px;
+            z-index: 1001;
         }
     </style>
 </head>
@@ -42,15 +38,14 @@
 
     <div id="menu-filtros">
         <h3>Mapa Nordeste</h3>
-        <p>Filtrar Pontos:</p>
-        <input type="checkbox" id="check-pontos" checked> Ver Estabelecimentos
-        <div class="instrucoes">Clique em um ponto e selecione "Adicionar à Rota"</div>
+        <p>Clique em um ponto e use o botão de rota.</p>
     </div>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     
     <script src="script.js"></script>
 
